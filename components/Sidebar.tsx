@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import Image from "next/image";
@@ -19,32 +18,16 @@ import {
   FileBox,
 } from "lucide-react";
 import clsx from "clsx";
-=======
-"use client"
-
-import Image from "next/image"
-import { useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { CalendarDays, Users, LayoutDashboard, BarChart2, Settings, Menu, X, LogOut, Landmark, UserCog } from "lucide-react"
-import clsx from "clsx"
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
 
 const menuSections = [
   {
     title: "ASSESSMENTS",
     items: [
       { name: "Dashboard", icon: LayoutDashboard, href: "/dashboard" },
-<<<<<<< HEAD
       { name: "Question Bank", icon: Landmark, href: "/questions-bank" },
             { name: "Candidates", icon: Users, href: "/candidates" },
       { name: "Test Packages", icon: FileBox, href: "/test-packages" },
       { name: "Test Distribution", icon: Send, href: "/test-distribution" },
-=======
-      { name: "Test Management", icon: CalendarDays, href: "/test-management" },
-      { name: "Candidates", icon: Users, href: "/candidates" },
-      { name: "Question Bank", icon: Landmark, href: "/questions-bank" },
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
       { name: "Results", icon: BarChart2, href: "/results" },
     ],
   },
@@ -52,7 +35,6 @@ const menuSections = [
     title: "OTHERS",
     items: [
       { name: "User Acces", icon: UserCog, href: "/access" },
-<<<<<<< HEAD
       { name: "Logs", icon: SquareActivity, href: "/logs" },
     ],
   },
@@ -61,16 +43,6 @@ const menuSections = [
 export default function Sidebar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-=======
-      { name: "Settings", icon: Settings, href: "/settings" },
-    ],
-  },
-]
-
-export default function Sidebar() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
 
   return (
     <>
@@ -84,16 +56,12 @@ export default function Sidebar() {
       </button>
 
       {/* Overlay */}
-<<<<<<< HEAD
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/40 z-40"
           onClick={() => setIsOpen(false)}
         />
       )}
-=======
-      {isOpen && <div className="fixed inset-0 bg-black/40 z-40" onClick={() => setIsOpen(false)} />}
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
 
       {/* Sidebar */}
       <aside
@@ -103,11 +71,7 @@ export default function Sidebar() {
           isOpen ? "translate-x-0" : "-translate-x-full",
 
           // DESKTOP (sticky inside layout flow)
-<<<<<<< HEAD
           "md:sticky md:top-0 md:self-start md:translate-x-0 md:z-10 md:flex md:h-screen md:w-[260px]"
-=======
-          "md:sticky md:top-0 md:self-start md:translate-x-0 md:z-10 md:flex md:h-screen md:w-[260px]",
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
         )}
       >
         {/* Close button */}
@@ -120,27 +84,19 @@ export default function Sidebar() {
         </button>
 
         {/* Logo */}
-<<<<<<< HEAD
         <Image
           src="../images/logo-dwp.svg"
           alt="Logo DWP"
           width={100}
           height={100}
         />
-=======
-        <Image src="../images/logo-dwp.svg" alt="Logo DWP" width={100} height={100} />
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
 
         {/* Menu */}
         {menuSections.map((section) => (
           <div key={section.title}>
-<<<<<<< HEAD
             <p className="text-xs font-medium text-gray-400 mb-2">
               {section.title}
             </p>
-=======
-            <p className="text-xs font-medium text-gray-400 mb-2">{section.title}</p>
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
             <ul className="flex flex-col gap-1">
               {section.items.map(({ name, icon: Icon, href }) => (
                 <li key={name}>
@@ -149,7 +105,6 @@ export default function Sidebar() {
                     onClick={() => setIsOpen(false)}
                     className={clsx(
                       "flex items-center gap-3 px-4 py-2 rounded-md text-sm font-medium",
-<<<<<<< HEAD
                       pathname === href
                         ? "bg-blue-500 text-white"
                         : "text-gray-700 hover:bg-gray-100"
@@ -161,12 +116,6 @@ export default function Sidebar() {
                         pathname === href ? "text-white" : "text-gray-400"
                       }
                     />
-=======
-                      pathname === href ? "bg-blue-500 text-white" : "text-gray-700 hover:bg-gray-100",
-                    )}
-                  >
-                    <Icon size={18} className={pathname === href ? "text-white" : "text-gray-400"} />
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
                     {name}
                   </Link>
                 </li>
@@ -187,9 +136,5 @@ export default function Sidebar() {
         </div>
       </aside>
     </>
-<<<<<<< HEAD
   );
-=======
-  )
->>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
 }
