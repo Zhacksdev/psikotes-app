@@ -1,5 +1,8 @@
 // services/resultsService.ts
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
 export interface Result {
   candidateId: string;
   avatarUrl: string;
@@ -11,6 +14,7 @@ export interface Result {
   status: "Completed" | "Ongoing";
 }
 
+<<<<<<< HEAD
 export interface DiscDimension {
   dimension: string;
   score: number;
@@ -34,6 +38,11 @@ export interface ResultDetail {
   strengths: string[];
   developmentAreas: string[];
   bestFitRoles: BestFitRole[];
+=======
+export interface ResultDetail {
+  candidateId: string;
+  candidateName: string;
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
   scores: Array<{ testName: string; date: string; score: number }>;
 }
 
@@ -86,6 +95,7 @@ const DUMMY_DETAILS: Record<string, ResultDetail> = {
   "1": {
     candidateId: "1",
     candidateName: "Muhammad Rivaldi Fatah",
+<<<<<<< HEAD
     avatarUrl: "/avatars/rivaldi.jpg",
     position: "UI/UX Designer",
     personality: "Dominance",
@@ -117,6 +127,8 @@ const DUMMY_DETAILS: Record<string, ResultDetail> = {
       { name: "UX Design", percentage: 80 },
       { name: "System Analyst", percentage: 75 },
     ],
+=======
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
     scores: [
       { testName: "Leadership Assessment", date: "30 Jun 2025", score: 85 },
       { testName: "Focus & Accuracy Test", date: "25 Jun 2025", score: 92 },
@@ -125,6 +137,7 @@ const DUMMY_DETAILS: Record<string, ResultDetail> = {
   "2": {
     candidateId: "2",
     candidateName: "Dicky Zanuar Saputra",
+<<<<<<< HEAD
     avatarUrl: "/avatars/dicky.jpg",
     position: "Quality Assurance",
     personality: "Steadiness",
@@ -144,10 +157,16 @@ const DUMMY_DETAILS: Record<string, ResultDetail> = {
       { name: "Automation Tester", percentage: 78 },
     ],
     scores: [{ testName: "Quality Analysis", date: "25 Jun 2025", score: 88 }],
+=======
+    scores: [
+      { testName: "Quality Analysis", date: "25 Jun 2025", score: 88 },
+    ],
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
   },
   "3": {
     candidateId: "3",
     candidateName: "Bryan Pratama",
+<<<<<<< HEAD
     avatarUrl: "/avatars/bryan.jpg",
     position: "Engineer",
     personality: "Conscientiousness",
@@ -172,11 +191,16 @@ const DUMMY_DETAILS: Record<string, ResultDetail> = {
         date: "21 Jun 2025",
         score: 79,
       },
+=======
+    scores: [
+      { testName: "Entry-Level Psychotest", date: "21 Jun 2025", score: 79 },
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
     ],
   },
   "4": {
     candidateId: "4",
     candidateName: "Fahmi Tio Maulana",
+<<<<<<< HEAD
     avatarUrl: "/avatars/fahmi.jpg",
     position: "Frontend Dev",
     personality: "Influence",
@@ -201,24 +225,39 @@ const DUMMY_DETAILS: Record<string, ResultDetail> = {
         date: "11 Jun 2025",
         score: 73,
       },
+=======
+    scores: [
+      { testName: "Emotional Intelligence", date: "11 Jun 2025", score: 73 },
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
     ],
   },
 };
 
 // Simulasi panggilan API
 export async function getResults(): Promise<Result[]> {
+<<<<<<< HEAD
+=======
+  // simulasi network delay
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
   await new Promise((r) => setTimeout(r, 300));
   return DUMMY_RESULTS;
 }
 
+<<<<<<< HEAD
 export async function getResultDetail(
   candidateId: string
 ): Promise<ResultDetail> {
   await new Promise((r) => setTimeout(r, 300));
+=======
+export async function getResultDetail(candidateId: string): Promise<ResultDetail> {
+  await new Promise((r) => setTimeout(r, 300));
+  // fallback jika tidak ditemukan
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
   return (
     DUMMY_DETAILS[candidateId] || {
       candidateId,
       candidateName: "Unknown",
+<<<<<<< HEAD
       position: "-",
       personality: "-",
       fastAccuracy: 0,
@@ -228,6 +267,8 @@ export async function getResultDetail(
       strengths: [],
       developmentAreas: [],
       bestFitRoles: [],
+=======
+>>>>>>> 7b6796f4b351d96d10c2407f970f47bb7975196d
       scores: [],
     }
   );
