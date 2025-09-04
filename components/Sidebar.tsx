@@ -34,7 +34,7 @@ const menuSections = [
   {
     title: "OTHERS",
     items: [
-      { name: "User Acces", icon: UserCog, href: "/access" },
+      { name: "User Acces", icon: UserCog, href: "/user-management" },
       { name: "Logs", icon: SquareActivity, href: "/logs" },
     ],
   },
